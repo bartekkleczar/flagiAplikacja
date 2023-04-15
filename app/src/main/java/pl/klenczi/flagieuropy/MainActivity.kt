@@ -12,14 +12,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var albania = Panstwo("albania", u = "inne", z = true, cze = 1, bi = 0, ni = 0, cza = 1, image = R.drawable.albania)
-        var andora = Panstwo("andora", u = "pionowe", z = true, cze = 1, bi = 0, ni = 1, cza = 0, image = R.drawable.andora)
-        var armenia = Panstwo("armenia", u = "pionowe", z = false, cze = 1, bi = 0, ni = 1, cza = 0, image = R.drawable.armenia)
-        var austria = Panstwo("austria", u = "poziome", z = false, cze = 1, bi = 1, ni = 0, cza = 0, image = R.drawable.austria)
-        var azerbejdzan = Panstwo("azerbejdzan", u = "poziome", z = true, cze = 1, bi = 1, ni = 1, cza = 0, image = R.drawable.azerbejdzan)
-        var anglia = Panstwo("anglia", u = "krzyz", z = false, cze = 1, bi = 1, ni = 0, cza = 0, image = R.drawable.anglia)
-        var niemcy = Panstwo("niemcy", u = "poziome", z = false, cze = 1, bi = 0, ni = 0, cza = 1, image = R.drawable.niemcy)
-        var polska = Panstwo("polska", u = "poziome", z = false, cze = 1, bi = 1, ni = 0, cza = 0, image = R.drawable.polska)
+        val albania = Panstwo("albania", u = "inne", z = true, cze = 1, bi = 0, ni = 0, cza = 1, image = R.drawable.albania)
+        val andora = Panstwo("andora", u = "pionowe", z = true, cze = 1, bi = 0, ni = 1, cza = 0, image = R.drawable.andora)
+        val armenia = Panstwo("armenia", u = "pionowe", z = false, cze = 1, bi = 0, ni = 1, cza = 0, image = R.drawable.armenia)
+        val austria = Panstwo("austria", u = "poziome", z = false, cze = 1, bi = 1, ni = 0, cza = 0, image = R.drawable.austria)
+        val azerbejdzan = Panstwo("azerbejdzan", u = "poziome", z = true, cze = 1, bi = 1, ni = 1, cza = 0, image = R.drawable.azerbejdzan)
+        val anglia = Panstwo("anglia", u = "krzyz", z = false, cze = 1, bi = 1, ni = 0, cza = 0, image = R.drawable.anglia)
+        val niemcy = Panstwo("niemcy", u = "poziome", z = false, cze = 1, bi = 0, ni = 0, cza = 1, image = R.drawable.niemcy)
+        val polska = Panstwo("polska", u = "poziome", z = false, cze = 1, bi = 1, ni = 0, cza = 0, image = R.drawable.polska)
 
         val panstwa = mutableListOf<Panstwo>(
             albania, andora, armenia, austria, azerbejdzan, anglia, niemcy, polska
