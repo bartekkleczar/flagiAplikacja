@@ -4,5 +4,6 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="tvRv">#2196F3</color>
-    <color name="background">#FFFFFF</color>
+    <color name="backgroundRv">#FFFFFF</color>
+    <color name="backgroundMa">#009688</color>
 </resources>
