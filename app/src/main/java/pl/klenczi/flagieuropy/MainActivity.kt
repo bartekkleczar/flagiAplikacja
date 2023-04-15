@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         var Niemcy = Panstwo("Niemcy", u = "poziome", z = false, cze = true, bi = false, ni = false, cza = true)
         var Polska = Panstwo("Polska", u = "poziome", z = false, cze = true, bi = true, ni = false, cza = false)
 
-        val Panstwa = listOf<Panstwo>(
+        val panstwa = listOf<Panstwo>(
             Albania, Andora, Armenia, Austria, Azerbejdzan, Anglia, Niemcy, Polska
         )
 
@@ -29,6 +29,6 @@ class MainActivity : AppCompatActivity() {
         val colorTla = ContextCompat.getColor(this, R.color.backgroundMa)
         rv.setBackgroundColor(colorTla)
         rv.layoutManager = LinearLayoutManager(this)
-        rv.adapter = RvAdapter(Panstwa)
+        rv.adapter = RvAdapter(panstwa)
     }
 }
