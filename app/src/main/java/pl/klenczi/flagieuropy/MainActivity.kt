@@ -1,7 +1,9 @@
 package pl.klenczi.flagieuropy
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -11,6 +13,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val powrot = findViewById<Button>(R.id.btnPowrot)
+
+        powrot.setOnClickListener{
+            val intent = Intent(this, StartActivity::class.java)
+            startActivity(intent)
+        }
 
         val albania = Panstwo("Albania", u = "inne", z = true, cze = 1, bi = 0, ni = 0, cza = 1, image = R.drawable.albania)
         val andora = Panstwo("Andora", u = "pionowe", z = true, cze = 1, bi = 0, ni = 1, cza = 0, image = R.drawable.andora)
@@ -39,16 +48,18 @@ class MainActivity : AppCompatActivity() {
         val bialy = intent.getIntExtra("bialy", 2)
         val niebieski = intent.getIntExtra("niebieski", 2)
         val czarny = intent.getIntExtra("czarny", 2)
+        val pozycja = intent.getStringExtra("pozycja")
 
         filterKolory(panstwa, panstwaPoKolorach, cze = czerwony, bi = bialy, ni = niebieski, cza = czarny)
-        //filterUlozenie(panstwaPoKolorach, panstwaPoUlozeniu, u = "poziome")
+        if (pozycja != null){ filterUlozenie(panstwaPoKolorach, panstwaPoUlozeniu, u = pozycja) }
+        else { filterUlozenie(panstwaPoKolorach, panstwaPoUlozeniu, u = "inne") }
         //filterZnaczek(panstwaPoUlozeniu, panstwaPoZnaczku, z = true)
 
         fun ostatiaLista(p: MutableList<Panstwo>, pk: MutableList<Panstwo>, pu: MutableList<Panstwo>, pz: MutableList<Panstwo>): MutableList<Panstwo> {
             if(!pz.isEmpty()){return pz}
-            if(!pu.isEmpty()){return pu}
-            if(!pk.isEmpty()){return pk}
-            if(!p.isEmpty()){return p}
+            else if(!pu.isEmpty()){return pu}
+            else if(!pk.isEmpty()){return pk}
+            else if(!p.isEmpty()){return p}
             else{return p}
         }
 
