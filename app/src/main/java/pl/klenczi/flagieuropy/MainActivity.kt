@@ -12,14 +12,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var Albania = Panstwo("Albania", u = "inne", z = true, cze = true, bi = false, ni = false, cza = true, image = R.drawable.albania)
-        var Andora = Panstwo("Andora", u = "pionowe", z = true, cze = true, bi = false, ni = true, cza = false, image = R.drawable.andora)
-        var Armenia = Panstwo("Armenia", u = "pionowe", z = false, cze = true, bi = false, ni = true, cza = false, image = R.drawable.armenia)
-        var Austria = Panstwo("Austria", u = "poziome", z = false, cze = true, bi = true, ni = false, cza = false, image = R.drawable.austria)
-        var Azerbejdzan = Panstwo("Azerbejdzan", u = "poziome", z = true, cze = true, bi = true, ni = true, cza = false, image = R.drawable.azerbejdzan)
-        var Anglia = Panstwo("Anglia", u = "krzyz", z = false, cze = true, bi = true, ni = false, cza = false, image = R.drawable.anglia)
-        var Niemcy = Panstwo("Niemcy", u = "poziome", z = false, cze = true, bi = false, ni = false, cza = true, image = R.drawable.niemcy)
-        var Polska = Panstwo("Polska", u = "poziome", z = false, cze = true, bi = true, ni = false, cza = false, image = R.drawable.polska)
+        var Albania = Panstwo("Albania", u = "inne", z = true, cze = 1, bi = 0, ni = 0, cza = 1, image = R.drawable.albania)
+        var Andora = Panstwo("Andora", u = "pionowe", z = true, cze = 1, bi = 0, ni = 1, cza = 0, image = R.drawable.andora)
+        var Armenia = Panstwo("Armenia", u = "pionowe", z = false, cze = 1, bi = 0, ni = 1, cza = 0, image = R.drawable.armenia)
+        var Austria = Panstwo("Austria", u = "poziome", z = false, cze = 1, bi = 1, ni = 0, cza = 0, image = R.drawable.austria)
+        var Azerbejdzan = Panstwo("Azerbejdzan", u = "poziome", z = true, cze = 1, bi = 1, ni = 1, cza = 0, image = R.drawable.azerbejdzan)
+        var Anglia = Panstwo("Anglia", u = "krzyz", z = false, cze = 1, bi = 1, ni = 0, cza = 0, image = R.drawable.anglia)
+        var Niemcy = Panstwo("Niemcy", u = "poziome", z = false, cze = 1, bi = 0, ni = 0, cza = 1, image = R.drawable.niemcy)
+        var Polska = Panstwo("Polska", u = "poziome", z = false, cze = 1, bi = 1, ni = 0, cza = 0, image = R.drawable.polska)
 
         val panstwa = mutableListOf<Panstwo>(
             Albania, Andora, Armenia, Austria, Azerbejdzan, Anglia, Niemcy, Polska
@@ -34,8 +34,8 @@ class MainActivity : AppCompatActivity() {
         rv.setBackgroundColor(colorTla)
         rv.layoutManager = LinearLayoutManager(this)
 
-        filterKolory(panstwa, panstwaPoKolorach, cze = true, bi = true)
-        filterUlozenie(panstwaPoKolorach, panstwaPoUlozeniu, u = "poziome")
+        filterKolory(panstwa, panstwaPoKolorach, cze = 1, bi = 1)
+        //filterUlozenie(panstwaPoKolorach, panstwaPoUlozeniu, u = "krzyz")
 
         fun ostatiaLista(p: MutableList<Panstwo>, pk: MutableList<Panstwo>, pu: MutableList<Panstwo>, pz: MutableList<Panstwo>): MutableList<Panstwo> {
             if(!pz.isEmpty()){return pz}
