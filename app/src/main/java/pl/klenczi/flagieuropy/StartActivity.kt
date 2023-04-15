@@ -58,7 +58,7 @@ class StartActivity : AppCompatActivity() {
             }
         }
 
-        var pozycja = "inne"
+        var pozycja = "dow"
 
         val rbGroup = findViewById<RadioGroup>(R.id.rbGroup)
         rbGroup.setOnCheckedChangeListener { group, checkedId ->
@@ -66,6 +66,7 @@ class StartActivity : AppCompatActivity() {
             else if(checkedId == R.id.rbPoziome){pozycja = "poziome"}
             else if(checkedId == R.id.rbKrzyz){pozycja = "krzyze"}
             else if(checkedId == R.id.rbInne){pozycja = "inne"}
+            else{pozycja = "dow"}
         }
 
         val filter = findViewById<Button>(R.id.btnFilter)
