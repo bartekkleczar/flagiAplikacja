@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
+import android.widget.RadioGroup
 import android.widget.Switch
 
 class StartActivity : AppCompatActivity() {
@@ -57,6 +58,16 @@ class StartActivity : AppCompatActivity() {
             }
         }
 
+        var pozycja = "inne"
+
+        val rbGroup = findViewById<RadioGroup>(R.id.rbGroup)
+        rbGroup.setOnCheckedChangeListener { group, checkedId ->
+            if(checkedId == R.id.rbPionowe){pozycja = "pionowe"}
+            else if(checkedId == R.id.rbPoziome){pozycja = "poziome"}
+            else if(checkedId == R.id.rbKrzyz){pozycja = "krzyze"}
+            else if(checkedId == R.id.rbInne){pozycja = "inne"}
+        }
+
         val filter = findViewById<Button>(R.id.btnFilter)
         filter.setOnClickListener{
             val intent = Intent(this, MainActivity::class.java)
@@ -65,6 +76,7 @@ class StartActivity : AppCompatActivity() {
             intent.putExtra("bialy", bialy)
             intent.putExtra("niebieski", niebieski)
             intent.putExtra("czarny", czarny)
+            intent.putExtra("pozycja", pozycja)
 
             startActivity(intent)
         }
