@@ -21,14 +21,29 @@ class MainActivity : AppCompatActivity() {
         var Niemcy = Panstwo("Niemcy", u = "poziome", z = false, cze = true, bi = false, ni = false, cza = true)
         var Polska = Panstwo("Polska", u = "poziome", z = false, cze = true, bi = true, ni = false, cza = false)
 
-        val panstwa = listOf<Panstwo>(
+        val panstwa = mutableListOf<Panstwo>(
             Albania, Andora, Armenia, Austria, Azerbejdzan, Anglia, Niemcy, Polska
         )
+
+        val panstwaPoKolorach = mutableListOf<Panstwo>()
+        val panstwaPoUlozeniu = mutableListOf<Panstwo>()
+        val panstwaPoZnaczku = mutableListOf<Panstwo>()
 
         val rv = findViewById<RecyclerView>(R.id.rvFlagi)
         val colorTla = ContextCompat.getColor(this, R.color.backgroundMa)
         rv.setBackgroundColor(colorTla)
         rv.layoutManager = LinearLayoutManager(this)
-        rv.adapter = RvAdapter(panstwa)
+
+        filterKolory(panstwa, panstwaPoKolorach, cze = true, bi = true)
+
+        fun ostatiaLista(p: MutableList<Panstwo>, pk: MutableList<Panstwo>, pu: MutableList<Panstwo>, pz: MutableList<Panstwo>): MutableList<Panstwo> {
+            if(!pz.isEmpty()){return pz}
+            if(!pu.isEmpty()){return pu}
+            if(!pk.isEmpty()){return pk}
+            if(!p.isEmpty()){return p}
+            else{return p}
+        }
+
+        rv.adapter = RvAdapter(ostatiaLista(panstwa, panstwaPoKolorach, panstwaPoUlozeniu, panstwaPoZnaczku))
     }
 }
