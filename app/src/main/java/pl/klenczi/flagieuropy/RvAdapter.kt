@@ -18,8 +18,11 @@ class RvAdapter(private val kraje: List<Panstwo>): RecyclerView.Adapter<MyVHolde
         return MyVHolder(listItem)
     }
 
-    override fun onBindViewHolder(holder: MyVHolder, position: Int) { // tu dawaj to co chcesz wyswietlic
+    override fun onBindViewHolder(holder: MyVHolder, position: Int) {
+        // tu dawaj to co chcesz wyswietlic
+        val kraj = kraje[position]
 
+        holder.bind(kraj)
     }
 
     override fun getItemCount(): Int {
@@ -30,5 +33,8 @@ class RvAdapter(private val kraje: List<Panstwo>): RecyclerView.Adapter<MyVHolde
 }
 
 class MyVHolder(val view: View):RecyclerView.ViewHolder(view){
-
+    fun bind(panstwo: Panstwo) {
+        val kraj = view.findViewById<TextView>(R.id.tvKraj)
+        kraj.text = panstwo.n
+    }
 }
