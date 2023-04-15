@@ -1,16 +1,16 @@
 package pl.klenczi.hindustlumaczyrecyclerview
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import pl.klenczi.flagieuropy.Panstwo
 import pl.klenczi.flagieuropy.R
 
 class RvAdapter(private val kraje: List<Panstwo>): RecyclerView.Adapter<MyVHolder>(){
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyVHolder {
         // tego nie tykasz w zasadzie bo po co, wazne ze dziala
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -36,5 +36,8 @@ class MyVHolder(val view: View):RecyclerView.ViewHolder(view){
     fun bind(panstwo: Panstwo) {
         val kraj = view.findViewById<TextView>(R.id.tvKraj)
         kraj.text = panstwo.n
+
+        val flaga = view.findViewById<ImageView>(R.id.ivFlaga)
+        flaga.setImageResource(panstwo.image)
     }
 }
