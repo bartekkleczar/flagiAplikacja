@@ -130,7 +130,7 @@
                 app:layout_constraintTop_toTopOf="parent" >
 
                 <RadioButton
-                    android:id="@+id/radioButton"
+                    android:id="@+id/rbPionowe"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="25dp"
@@ -139,7 +139,7 @@
                     android:textStyle="bold" />
 
                 <RadioButton
-                    android:id="@+id/radioButton2"
+                    android:id="@+id/rbPoziome"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Poziome"
@@ -147,7 +147,7 @@
                     android:textStyle="bold" />
 
                 <RadioButton
-                    android:id="@+id/radioButton3"
+                    android:id="@+id/rbKrzyz"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Krzyz"
@@ -155,7 +155,7 @@
                     android:textStyle="bold" />
 
                 <RadioButton
-                    android:id="@+id/radioButton4"
+                    android:id="@+id/rbInne"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Inne"
