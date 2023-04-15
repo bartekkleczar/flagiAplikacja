@@ -34,9 +34,15 @@ class MainActivity : AppCompatActivity() {
         rv.setBackgroundColor(colorTla)
         rv.layoutManager = LinearLayoutManager(this)
 
-        filterKolory(panstwa, panstwaPoKolorach, cze = 1, bi = 1)
-        filterUlozenie(panstwaPoKolorach, panstwaPoUlozeniu, u = "poziome")
-        filterZnaczek(panstwaPoUlozeniu, panstwaPoZnaczku, z = true)
+        val intent = intent
+        val czerwony = intent.getIntExtra("czerwony", 2)
+        val bialy = intent.getIntExtra("bialy", 2)
+        val niebieski = intent.getIntExtra("niebieski", 2)
+        val czarny = intent.getIntExtra("czarny", 2)
+
+        filterKolory(panstwa, panstwaPoKolorach, cze = czerwony, bi = bialy, ni = niebieski, cza = czarny)
+        //filterUlozenie(panstwaPoKolorach, panstwaPoUlozeniu, u = "poziome")
+        //filterZnaczek(panstwaPoUlozeniu, panstwaPoZnaczku, z = true)
 
         fun ostatiaLista(p: MutableList<Panstwo>, pk: MutableList<Panstwo>, pu: MutableList<Panstwo>, pz: MutableList<Panstwo>): MutableList<Panstwo> {
             if(!pz.isEmpty()){return pz}
