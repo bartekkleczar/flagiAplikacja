@@ -12,21 +12,10 @@ class StartActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
 
-        
-        var switch = 0
         var czerwony = 0
         var bialy = 0
         var niebieski = 0
         var czarny = 0
-
-        val sw = findViewById<Switch>(R.id.swIle)
-        sw.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-                switch = 1
-            } else {
-                switch = 0
-            }
-        }
 
         val cbCzerwony = findViewById<CheckBox>(R.id.cbCzerwony)
         cbCzerwony.setOnCheckedChangeListener { buttonView, isChecked ->
@@ -34,7 +23,7 @@ class StartActivity : AppCompatActivity() {
                 czerwony = 1
 
             } else {
-                if(switch == 0){czerwony = 2}
+                czerwony = 0
             }
         }
 
@@ -44,7 +33,7 @@ class StartActivity : AppCompatActivity() {
                 bialy = 1
 
             } else {
-                if(switch == 0){bialy = 2}
+                bialy = 0
             }
         }
 
@@ -54,7 +43,7 @@ class StartActivity : AppCompatActivity() {
                 niebieski = 1
 
             } else {
-                if(switch == 0){niebieski = 2}
+                niebieski = 0
             }
         }
         
@@ -64,7 +53,7 @@ class StartActivity : AppCompatActivity() {
                 czarny = 1
 
             } else {
-                if(switch == 0){czarny = 2}
+                czarny = 0
             }
         }
 
