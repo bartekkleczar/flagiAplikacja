@@ -8,7 +8,7 @@ fun filterKolory(listaInput: MutableList<Panstwo>, listaOutput: MutableList<Pans
     }
 }
 
-fun fiterUlozenie(listaInput: MutableList<Panstwo>, listaOutput: MutableList<Panstwo>, u: String = "inne"){
+fun filterUlozenie(listaInput: MutableList<Panstwo>, listaOutput: MutableList<Panstwo>, u: String = "inne"){
     for(i in listaInput){
         if(u == i.u){
             listaOutput.add(i)
@@ -16,7 +16,7 @@ fun fiterUlozenie(listaInput: MutableList<Panstwo>, listaOutput: MutableList<Pan
     }
 }
 
-fun fiterZnaczek(listaInput: MutableList<Panstwo>, listaOutput: MutableList<Panstwo>, z: Boolean = false){
+fun filterZnaczek(listaInput: MutableList<Panstwo>, listaOutput: MutableList<Panstwo>, z: Boolean = false){
     for(i in listaInput){
         if(z == i.z){
             listaOutput.add(i)
