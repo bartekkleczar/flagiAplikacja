@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
 
         filterKolory(panstwa, panstwaPoKolorach, cze = czerwony, bi = bialy, ni = niebieski, cza = czarny)
         if (pozycja != null){ filterUlozenie(panstwaPoKolorach, panstwaPoUlozeniu, u = pozycja) }
-        else { filterUlozenie(panstwaPoKolorach, panstwaPoUlozeniu, u = "inne") }
+        else { filterUlozenie(panstwaPoKolorach, panstwaPoUlozeniu, u = "dow") }
         //filterZnaczek(panstwaPoUlozeniu, panstwaPoZnaczku, z = true)
 
         fun ostatiaLista(p: MutableList<Panstwo>, pk: MutableList<Panstwo>, pu: MutableList<Panstwo>, pz: MutableList<Panstwo>): MutableList<Panstwo> {
