@@ -22,7 +22,7 @@ fun filterUlozenie(listaInput: MutableList<Panstwo>, listaOutput: MutableList<Pa
     }
 }
 
-fun filterZnaczak(listaInput: MutableList<Panstwo>, listaOutput: MutableList<Panstwo>, z: Boolean = false){
+fun filterZnaczek(listaInput: MutableList<Panstwo>, listaOutput: MutableList<Panstwo>, z: Boolean = false){
     for(i in listaInput){
         if(z == i.z){
             listaOutput.add(i)
