@@ -25,7 +25,7 @@ class StartActivity : AppCompatActivity() {
             else if(checkedId == R.id.rbPoziome){pozycja = "poziome"}
             else if(checkedId == R.id.rbKrzyz){pozycja = "krzyz"}
             else if(checkedId == R.id.rbInne){pozycja = "inne"}
-            else{pozycja = "dowolne"}
+            else if(checkedId == R.id.rbDowolne){pozycja = "dowolne"}
             key += "b"
             if(key == "aab" || key == "aba" || key == "baa") {filter.visibility = View.VISIBLE}
         }
