@@ -13,6 +13,16 @@ class StartActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
 
+        var pozycja = "dowolne"
+        val rbGroup = findViewById<RadioGroup>(R.id.rbGroup)
+        rbGroup.setOnCheckedChangeListener { group, checkedId ->
+            if(checkedId == R.id.rbPionowe){pozycja = "pionowe"}
+            else if(checkedId == R.id.rbPoziome){pozycja = "poziome"}
+            else if(checkedId == R.id.rbKrzyz){pozycja = "krzyz"}
+            else if(checkedId == R.id.rbInne){pozycja = "inne"}
+            else{pozycja = "dowolne"}
+        }
+
         var czerwony = 0
         var bialy = 0
         var niebieski = 0
@@ -56,17 +66,6 @@ class StartActivity : AppCompatActivity() {
             } else {
                 czarny = 0
             }
-        }
-
-        var pozycja = "dow"
-
-        val rbGroup = findViewById<RadioGroup>(R.id.rbGroup)
-        rbGroup.setOnCheckedChangeListener { group, checkedId ->
-            if(checkedId == R.id.rbPionowe){pozycja = "pionowe"}
-            else if(checkedId == R.id.rbPoziome){pozycja = "poziome"}
-            else if(checkedId == R.id.rbKrzyz){pozycja = "krzyze"}
-            else if(checkedId == R.id.rbInne){pozycja = "inne"}
-            else{pozycja = "dow"}
         }
 
         val filter = findViewById<Button>(R.id.btnFilter)
