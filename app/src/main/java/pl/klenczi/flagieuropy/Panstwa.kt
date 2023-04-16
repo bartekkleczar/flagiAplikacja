@@ -14,6 +14,12 @@ val czarnogora = Panstwo("Czarnogora", u = "inne", z = true, cze = 1, bi = 0, ni
 val czechy = Panstwo("Czechy", u = "poziome", z = false, cze = 1, bi = 1, ni = 1, cza = 0, image = R.drawable.czechy)
 val dania = Panstwo("Dania", u = "krzyz", z = false, cze = 1, bi = 1, ni = 0, cza = 0, image = R.drawable.dania)
 val estonia = Panstwo("Estonia", u = "poziome", z = false, cze = 0, bi = 1, ni = 1, cza = 1, image = R.drawable.estonia)
+val finlandia = Panstwo("Finlandia", u = "krzyz", z = false, cze = 0, bi = 1, ni = 1, cza = 0, image = R.drawable.finlandia)
+val francja = Panstwo("Francja", u = "pionowe", z = false, cze = 1, bi = 1, ni = 1, cza = 0, image = R.drawable.francja)
+val grecja = Panstwo("Grecja", u = "poziome", z = false, cze = 0, bi = 1, ni = 1, cza = 0, image = R.drawable.grecja)
+val hiszpania = Panstwo("Hiszpania", u = "poziome", z = true, cze = 1, bi = 0, ni = 0, cza = 0, image = R.drawable.hiszpania)
+val holandia = Panstwo("Holandia", u = "poziome", z = false, cze = 1, bi = 1, ni = 0, cza = 0, image = R.drawable.holandia)
+val irlandia = Panstwo("Irlandia", u = "pionowe", z = false, cze = 0, bi = 1, ni = 0, cza = 0, image = R.drawable.irlandia)
 
 val niemcy = Panstwo("Niemcy", u = "poziome", z = false, cze = 1, bi = 0, ni = 0, cza = 1, image = R.drawable.niemcy)
 val polska = Panstwo("Polska", u = "poziome", z = false, cze = 1, bi = 1, ni = 0, cza = 0, image = R.drawable.polska)
@@ -21,6 +27,7 @@ val polska = Panstwo("Polska", u = "poziome", z = false, cze = 1, bi = 1, ni = 0
 val panstwa = mutableListOf<Panstwo>(
     albania, andora, armenia, austria, azerbejdzan, anglia, bialorus,
     bosnia, bulgaria, chorwacja, czarnogora, czechy, dania, estonia,
+    finlandia, francja, grecja, hiszpania, holandia, irlandia,
 
     niemcy, polska
 )
