@@ -11,13 +11,13 @@
 
     <Button
         android:id="@+id/btnFilter"
-        android:layout_width="143dp"
-        android:layout_height="106dp"
+        android:layout_width="111dp"
+        android:layout_height="75dp"
         android:backgroundTint="@color/backgroundMa"
         android:text="F"
         android:textSize="34sp"
         android:textStyle="bold"
-        app:cornerRadius="50dp"
+        app:cornerRadius="@android:dimen/app_icon_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.024"
@@ -27,7 +27,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="240dp"
-        android:layout_height="220dp"
+        android:layout_height="250dp"
         android:layout_marginBottom="25dp"
         android:backgroundTint="@color/backgroundRv"
         app:cardCornerRadius="50dp"
@@ -36,7 +36,7 @@
         app:layout_constraintHorizontal_bias="0.906"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.522">
+        app:layout_constraintVertical_bias="0.26">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="210dp"
@@ -55,7 +55,7 @@
                 app:layout_constraintHorizontal_bias="0.6"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0">
+                app:layout_constraintVertical_bias="0.866">
 
                 <CheckBox
                     android:id="@+id/cbBialy"
@@ -102,8 +102,8 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="240dp"
-        android:layout_height="220dp"
+        android:layout_width="238dp"
+        android:layout_height="322dp"
         android:layout_marginTop="25dp"
         android:backgroundTint="@color/backgroundRv"
         app:cardCornerRadius="50dp"
@@ -121,7 +121,7 @@
             <LinearLayout
                 android:id="@+id/linearLayout2"
                 android:layout_width="wrap_content"
-                android:layout_height="220dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -171,6 +171,16 @@
                         android:textColor="@color/white"
                         android:textSize="30sp"
                         android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/rbDowolne"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dowlone"
+                        android:textColor="@color/white"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
                 </RadioGroup>
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
