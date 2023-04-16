@@ -27,7 +27,7 @@ class StartActivity : AppCompatActivity() {
             else if(checkedId == R.id.rbInne){pozycja = "inne"}
             else if(checkedId == R.id.rbDowolne){pozycja = "dowolne"}
             key += "b"
-            if(key == "aab" || key == "aba" || key == "baa") {filter.visibility = View.VISIBLE}
+            if(key == "aab" || key == "aba" || key == "baa" || (key.length > 3 && "b" in key)) {filter.visibility = View.VISIBLE}
         }
 
         var czerwony = 0
