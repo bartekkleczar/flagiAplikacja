@@ -12,7 +12,9 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvFlagi"
         android:layout_width="match_parent"
-        android:layout_height="508dp"
+        android:layout_height="500dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -36,7 +38,7 @@
         app:layout_constraintVertical_bias="0.975" />
 
     <androidx.cardview.widget.CardView
-        android:layout_width="411dp"
+        android:layout_width="match_parent"
         android:layout_height="64dp"
         app:cardBackgroundColor="@color/backgroundMa"
         app:cardCornerRadius="50dp"
