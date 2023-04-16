@@ -3,7 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="tvRv">#2196F3</color>
-    <color name="backgroundRv">#FFFFFF</color>
-    <color name="backgroundMa">#009688</color>
+    <color name="tvRv">#EC87C0</color>
+    <color name="backgroundRv">#4FC1E9</color>
+    <color name="backgroundMa">#4FC1E9</color>
 </resources>
