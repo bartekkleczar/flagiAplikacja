@@ -23,13 +23,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val panstwa = mutableListOf<Panstwo>(
-            albania, andora, armenia, austria, azerbejdzan, anglia, bialorus,
-            bosnia, bulgaria, chorwacja, czarnogora, czechy, dania, estonia,
-
-            niemcy, polska
-        )
-
         val panstwaPoKolorach = mutableListOf<Panstwo>()
         val panstwaPoUlozeniu = mutableListOf<Panstwo>()
         val panstwaPoZnaczku = mutableListOf<Panstwo>()

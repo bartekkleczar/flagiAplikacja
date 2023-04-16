@@ -17,3 +17,10 @@ val estonia = Panstwo("Estonia", u = "poziome", z = false, cze = 0, bi = 1, ni =
 
 val niemcy = Panstwo("Niemcy", u = "poziome", z = false, cze = 1, bi = 0, ni = 0, cza = 1, image = R.drawable.niemcy)
 val polska = Panstwo("Polska", u = "poziome", z = false, cze = 1, bi = 1, ni = 0, cza = 0, image = R.drawable.polska)
+
+val panstwa = mutableListOf<Panstwo>(
+    albania, andora, armenia, austria, azerbejdzan, anglia, bialorus,
+    bosnia, bulgaria, chorwacja, czarnogora, czechy, dania, estonia,
+
+    niemcy, polska
+)
