@@ -3,6 +3,7 @@ package pl.klenczi.flagieuropy
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.RadioGroup
@@ -13,6 +14,10 @@ class StartActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
 
+        val filter = findViewById<Button>(R.id.btnFilter)
+        filter.visibility = View.INVISIBLE
+        var key = ""
+
         var pozycja = "dowolne"
         val rbGroup = findViewById<RadioGroup>(R.id.rbGroup)
         rbGroup.setOnCheckedChangeListener { group, checkedId ->
@@ -21,6 +26,8 @@ class StartActivity : AppCompatActivity() {
             else if(checkedId == R.id.rbKrzyz){pozycja = "krzyz"}
             else if(checkedId == R.id.rbInne){pozycja = "inne"}
             else{pozycja = "dowolne"}
+            key += "b"
+            if(key == "aab" || key == "aba" || key == "baa") {filter.visibility = View.VISIBLE}
         }
 
         var czerwony = 0
@@ -32,7 +39,8 @@ class StartActivity : AppCompatActivity() {
         cbCzerwony.setOnCheckedChangeListener { buttonView, isChecked ->
             if (isChecked) {
                 czerwony = 1
-
+                key += "a"
+                if(key == "aab" || key == "aba" || key == "baa" || (key.length > 3 && "b" in key)) {filter.visibility = View.VISIBLE}
             } else {
                 czerwony = 0
             }
@@ -42,7 +50,8 @@ class StartActivity : AppCompatActivity() {
         cbbialy.setOnCheckedChangeListener { buttonView, isChecked ->
             if (isChecked) {
                 bialy = 1
-
+                key += "a"
+                if(key == "aab" || key == "aba" || key == "baa" || (key.length > 3 && "b" in key)) {filter.visibility = View.VISIBLE}
             } else {
                 bialy = 0
             }
@@ -52,7 +61,8 @@ class StartActivity : AppCompatActivity() {
         cbniebieski.setOnCheckedChangeListener { buttonView, isChecked ->
             if (isChecked) {
                 niebieski = 1
-
+                key += "a"
+                if(key == "aab" || key == "aba" || key == "baa" || (key.length > 3 && "b" in key)) {filter.visibility = View.VISIBLE}
             } else {
                 niebieski = 0
             }
@@ -62,13 +72,13 @@ class StartActivity : AppCompatActivity() {
         cbCzarny.setOnCheckedChangeListener { buttonView, isChecked ->
             if (isChecked) {
                 czarny = 1
-
+                key += "a"
+                if(key == "aab" || key == "aba" || key == "baa" || (key.length > 3 && "b" in key)) {filter.visibility = View.VISIBLE}
             } else {
                 czarny = 0
             }
         }
 
-        val filter = findViewById<Button>(R.id.btnFilter)
         filter.setOnClickListener{
             val intent = Intent(this, MainActivity::class.java)
 
