@@ -17,7 +17,7 @@
         android:text="F"
         android:textSize="34sp"
         android:textStyle="bold"
-        app:cornerRadius="@android:dimen/app_icon_size"
+        app:buttonCornerRadius="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.024"
