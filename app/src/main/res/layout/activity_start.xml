@@ -10,165 +10,187 @@
     tools:context=".StartActivity">
 
     <Button
-        android:id="@+id/btnFilter"
+        android:id="@+id/btnIlosc"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="103dp"
         android:backgroundTint="@color/backgroundMa"
-        android:text="Filter"
+        android:text="Jeden"
         android:textSize="34sp"
         android:textStyle="bold"
         app:cornerRadius="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.024"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.045" />
+        app:layout_constraintVertical_bias="0.8" />
+
+    <Button
+        android:id="@+id/btnFilter"
+        android:layout_width="143dp"
+        android:layout_height="106dp"
+        android:backgroundTint="@color/backgroundMa"
+        android:text="F"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.024"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.965" />
 
     <androidx.cardview.widget.CardView
-        android:layout_width="340dp"
-        android:layout_height="300dp"
-        android:layout_marginLeft="10dp"
+        android:layout_width="240dp"
+        android:layout_height="220dp"
+        android:layout_marginBottom="25dp"
         android:backgroundTint="@color/backgroundRv"
         app:cardCornerRadius="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.906"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.329">
+        app:layout_constraintVertical_bias="0.522">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="206dp"
-            android:layout_height="match_parent">
+            android:layout_width="210dp"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout">
 
-            <CheckBox
-                android:id="@+id/cbCzarny"
+            <LinearLayout
+                android:id="@+id/linearLayout"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/black"
-                android:text="Czarny"
-                android:textSize="30sp"
-                android:textStyle="bold"
+                android:layout_height="220dp"
+                android:layout_marginLeft="25dp"
+                android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.044"
+                app:layout_constraintHorizontal_bias="0.6"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.714" />
+                app:layout_constraintVertical_bias="0.0">
 
-            <CheckBox
-                android:id="@+id/cbNiebieski"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@android:color/holo_blue_dark"
-                android:text="Niebieski"
-                android:textColor="@android:color/holo_blue_dark"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.048"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.532" />
+                <CheckBox
+                    android:id="@+id/cbBialy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/white"
+                    android:text="Biały"
+                    android:textColor="@android:color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
 
-            <CheckBox
-                android:id="@+id/cbBialy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/white"
-                android:text="Biały"
-                android:textColor="@android:color/white"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.042"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.349" />
+                <CheckBox
+                    android:id="@+id/cbCzarny"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/white"
+                    android:text="Czarny"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
 
-            <CheckBox
-                android:id="@+id/cbCzerwony"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@android:color/holo_red_dark"
-                android:text="Czerwony"
-                android:textColor="@android:color/holo_red_dark"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.048"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.167" />
+                <CheckBox
+                    android:id="@+id/cbNiebieski"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_blue_dark"
+                    android:text="Niebieski"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
 
+                <CheckBox
+                    android:id="@+id/cbCzerwony"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="Czerwony"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="344dp"
-        android:layout_height="236dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="240dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="25dp"
         android:backgroundTint="@color/backgroundRv"
         app:cardCornerRadius="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.906"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.91">
+        app:layout_constraintVertical_bias="0.947">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="209dp"
+            android:layout_width="210dp"
             android:layout_height="match_parent">
 
-            <RadioGroup
-                android:id="@+id/rbGroup"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="220dp"
+                android:layout_marginLeft="25dp"
+                android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.509"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <RadioButton
-                    android:id="@+id/rbPionowe"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
-                    android:text="Pionowe"
-                    android:textSize="30sp"
-                    android:textStyle="bold" />
+                <RadioGroup
+                    android:id="@+id/rbGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
 
-                <RadioButton
-                    android:id="@+id/rbPoziome"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Poziome"
-                    android:textSize="30sp"
-                    android:textStyle="bold" />
+                    <RadioButton
+                        android:id="@+id/rbPionowe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:text="Pionowe"
+                        android:textColor="@color/white"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
 
-                <RadioButton
-                    android:id="@+id/rbKrzyz"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Krzyz"
-                    android:textSize="30sp"
-                    android:textStyle="bold" />
+                    <RadioButton
+                        android:id="@+id/rbPoziome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Poziome"
+                        android:textColor="@color/white"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
 
-                <RadioButton
-                    android:id="@+id/rbInne"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Inne"
-                    android:textSize="30sp"
-                    android:textStyle="bold" />
-            </RadioGroup>
+                    <RadioButton
+                        android:id="@+id/rbKrzyz"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Krzyz"
+                        android:textColor="@color/white"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/rbInne"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Inne"
+                        android:textColor="@color/white"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+                </RadioGroup>
+            </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
