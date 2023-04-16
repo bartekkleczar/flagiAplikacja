@@ -33,12 +33,19 @@ class MainActivity : AppCompatActivity() {
         val bosnia = Panstwo("Bosnia", u = "inne", z = true, cze = 0, bi = 1, ni = 1, cza = 0, image = R.drawable.bosnia)
         val bulgaria = Panstwo("Bulgaria", u = "poziome", z = false, cze = 1, bi = 1, ni = 0, cza = 0, image = R.drawable.bulgaria)
         val chorwacja = Panstwo("Chorwacja", u = "poziome", z = true, cze = 1, bi = 1, ni = 1, cza = 0, image = R.drawable.chorwacja)
+        val czarnogora = Panstwo("Czarnogora", u = "inne", z = true, cze = 1, bi = 0, ni = 0, cza = 0, image = R.drawable.czarnogora)
+        val czechy = Panstwo("Czechy", u = "poziome", z = false, cze = 1, bi = 1, ni = 1, cza = 0, image = R.drawable.czechy)
+        val dania = Panstwo("Dania", u = "krzyz", z = false, cze = 1, bi = 1, ni = 0, cza = 0, image = R.drawable.dania)
+        val estonia = Panstwo("Estonia", u = "poziome", z = false, cze = 0, bi = 1, ni = 1, cza = 1, image = R.drawable.estonia)
+
         val niemcy = Panstwo("Niemcy", u = "poziome", z = false, cze = 1, bi = 0, ni = 0, cza = 1, image = R.drawable.niemcy)
         val polska = Panstwo("Polska", u = "poziome", z = false, cze = 1, bi = 1, ni = 0, cza = 0, image = R.drawable.polska)
 
         val panstwa = mutableListOf<Panstwo>(
             albania, andora, armenia, austria, azerbejdzan, anglia, bialorus,
-            bosnia, bulgaria, chorwacja, niemcy, polska
+            bosnia, bulgaria, chorwacja, czarnogora, czechy, dania, estonia,
+
+            niemcy, polska
         )
 
         val panstwaPoKolorach = mutableListOf<Panstwo>()
@@ -57,8 +64,6 @@ class MainActivity : AppCompatActivity() {
         val czarny = intent.getIntExtra("czarny", 0)
         val pozycja = intent.getStringExtra("pozycja")
 
-        filterKolory(panstwa, panstwaPoKolorach, cze = czerwony, bi = bialy, ni = niebieski, cza = czarny)
-
         val info = findViewById<TextView>(R.id.tvInfo)
         var text = ""
         if(czerwony == 1){text += "Czerwony"}
@@ -68,6 +73,7 @@ class MainActivity : AppCompatActivity() {
         text += "| $pozycja"
         info.text = text
 
+        filterKolory(panstwa, panstwaPoKolorach, cze = czerwony, bi = bialy, ni = niebieski, cza = czarny)
         if(pozycja != null){ filterUlozenie(panstwaPoKolorach, panstwaPoUlozeniu, u = pozycja) }
         //filterZnaczek(panstwaPoUlozeniu, panstwaPoZnaczku, z = true)
 
