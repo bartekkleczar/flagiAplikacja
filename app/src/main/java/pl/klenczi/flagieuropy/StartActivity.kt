@@ -23,15 +23,6 @@ class StartActivity : AppCompatActivity() {
             else{pozycja = "dowolne"}
         }
 
-        var switch = 2
-        val ile = findViewById<Button>(R.id.btnIlosc)
-        ile.setOnClickListener{
-            when(switch){
-            1 -> {switch = 2; ile.text = "wiele"}
-            2 -> {switch = 1; ile.text = "jeden"}
-            }
-        }
-
         var czerwony = 0
         var bialy = 0
         var niebieski = 0
