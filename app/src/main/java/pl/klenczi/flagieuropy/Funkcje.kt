@@ -14,7 +14,7 @@ fun filterKolory(listaInput: MutableList<Panstwo>, listaOutput: MutableList<Pans
     }
 }
 
-fun filterUlozenie(listaInput: MutableList<Panstwo>, listaOutput: MutableList<Panstwo>, u: String = "dowowolne"){
+fun filterUlozenie(listaInput: MutableList<Panstwo>, listaOutput: MutableList<Panstwo>, u: String = "dowolne"){
     for(i in listaInput){
         if(u == i.u || u == "dowolne"){
             listaOutput.add(i)
