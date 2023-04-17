@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.CheckBox
+import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Switch
 import android.widget.Toast
@@ -14,12 +15,29 @@ class StartActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
+        
+        val switchZnaczek = findViewById<Switch>(R.id.switchZnaczek)
+        switchZnaczek.isChecked = false
+        var switchZn = false
 
-        val switchUi = findViewById<Switch>(R.id.switchKolory)
-        switchUi.isChecked = true
-        var switch = 1
+        switchZnaczek.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                switchZn = true
+                Toast.makeText(this, "Znaczek: $switchZnaczek", Toast.LENGTH_SHORT).show()
+            }
+            if (!isChecked) {
+                switchZn = false
+                Toast.makeText(this, "Znaczek: $switchZnaczek", Toast.LENGTH_SHORT).show()
+            }
+        }
+        if(!switchZnaczek.isChecked){switchZn = false}
 
-        switchUi.setOnCheckedChangeListener { _, isChecked ->
+
+        val switchKolory = findViewById<Switch>(R.id.switchKolory)
+        switchZnaczek.isChecked = false
+        var switch = 2
+
+        switchKolory.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
                 switch = 1
                 Toast.makeText(this, "$switch", Toast.LENGTH_SHORT).show()
@@ -29,7 +47,8 @@ class StartActivity : AppCompatActivity() {
                 Toast.makeText(this, "$switch", Toast.LENGTH_SHORT).show()
             }
         }
-        if(!switchUi.isChecked){switch = 2}
+        if(!switchZnaczek.isChecked){switchZn = false}
+
 
         val filter = findViewById<Button>(R.id.btnFilter)
         //filter.visibility = View.INVISIBLE
@@ -53,6 +72,7 @@ class StartActivity : AppCompatActivity() {
         var czarny = 0
 
         val cbCzerwony = findViewById<CheckBox>(R.id.cbCzerwony)
+        cbCzerwony.isChecked = false
         cbCzerwony.setOnCheckedChangeListener { buttonView, isChecked ->
             if (isChecked) {
                 czerwony = 1
@@ -66,6 +86,7 @@ class StartActivity : AppCompatActivity() {
         if(!cbCzerwony.isChecked){czerwony = 0}
 
         val cbbialy = findViewById<CheckBox>(R.id.cbBialy)
+        cbbialy.isChecked = false
         cbbialy.setOnCheckedChangeListener { buttonView, isChecked ->
             if (isChecked) {
                 bialy = 1
@@ -79,6 +100,7 @@ class StartActivity : AppCompatActivity() {
         if(!cbbialy.isChecked){bialy = 0}
 
         val cbniebieski = findViewById<CheckBox>(R.id.cbNiebieski)
+        cbniebieski.isChecked = false
         cbniebieski.setOnCheckedChangeListener { buttonView, isChecked ->
             if (isChecked) {
                 niebieski = 1
@@ -92,6 +114,7 @@ class StartActivity : AppCompatActivity() {
         if(!cbniebieski.isChecked){niebieski = 0}
         
         val cbCzarny = findViewById<CheckBox>(R.id.cbCzarny)
+        cbCzarny.isChecked = false
         cbCzarny.setOnCheckedChangeListener { buttonView, isChecked ->
             if (isChecked) {
                 czarny = 1
@@ -104,19 +127,19 @@ class StartActivity : AppCompatActivity() {
         }
         if(!cbCzarny.isChecked){czarny = 0}
 
-        if(switch == 2 && czerwony == 0){czerwony = 2}
-        if(switch == 1 && czerwony != 1){czerwony = 0}
-
-        if(switch == 2 && bialy == 0){bialy = 2}
-        if(switch == 1 && bialy != 1){bialy = 0}
-
-        if(switch == 2 && niebieski == 0){niebieski = 2}
-        if(switch == 1 && niebieski != 1){niebieski = 0}
-
-        if(switch == 2 && czarny == 0){czarny = 2}
-        if(switch == 1 && czarny != 1){czarny = 0}
-
         filter.setOnClickListener{
+            if(switch == 2 && czerwony == 0){czerwony = 2}
+            if(switch == 1 && czerwony != 1){czerwony = 0}
+
+            if(switch == 2 && bialy == 0){bialy = 2}
+            if(switch == 1 && bialy != 1){bialy = 0}
+
+            if(switch == 2 && niebieski == 0){niebieski = 2}
+            if(switch == 1 && niebieski != 1){niebieski = 0}
+
+            if(switch == 2 && czarny == 0){czarny = 2}
+            if(switch == 1 && czarny != 1){czarny = 0}
+
             val intent = Intent(this, MainActivity::class.java)
 
             intent.putExtra("czerwony", czerwony)
@@ -124,7 +147,9 @@ class StartActivity : AppCompatActivity() {
             intent.putExtra("niebieski", niebieski)
             intent.putExtra("czarny", czarny)
             intent.putExtra("pozycja", pozycja)
-            
+            intent.putExtra("znaczek", switchZn)
+
+            //switchKolory.isChecked = true
             switch = 1
             czerwony = 0
             bialy = 0
@@ -132,6 +157,7 @@ class StartActivity : AppCompatActivity() {
             czarny = 0
             key = ""
             pozycja = "dowolne"
+            switchZn = false
 
             startActivity(intent)
         }

@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity() {
         val niebieski = intent.getIntExtra("niebieski", 0)
         val czarny = intent.getIntExtra("czarny", 0)
         val pozycja = intent.getStringExtra("pozycja")
+        val znaczek = intent.getBooleanExtra("znaczek", false)
 
         val info = findViewById<TextView>(R.id.tvInfo)
         var text = ""
@@ -50,7 +51,7 @@ class MainActivity : AppCompatActivity() {
 
         filterKolory(panstwa, panstwaPoKolorach, cze = czerwony, bi = bialy, ni = niebieski, cza = czarny)
         if(pozycja != null){ filterUlozenie(panstwaPoKolorach, panstwaPoUlozeniu, u = pozycja) }
-        //filterZnaczek(panstwaPoUlozeniu, panstwaPoZnaczku, z = true)
+        filterZnaczek(panstwaPoUlozeniu, panstwaPoZnaczku, z = znaczek)
 
         fun ostatiaLista(p: MutableList<Panstwo>, pk: MutableList<Panstwo>, pu: MutableList<Panstwo>, pz: MutableList<Panstwo>): MutableList<Panstwo> {
             if(!pz.isEmpty()){return pz}
@@ -60,6 +61,6 @@ class MainActivity : AppCompatActivity() {
             else{return p}
         }
 
-        rv.adapter = RvAdapter(panstwaPoUlozeniu)
+        rv.adapter = RvAdapter(panstwaPoZnaczku)
     }
 }
