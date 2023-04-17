@@ -53,13 +53,6 @@ class MainActivity : AppCompatActivity() {
         if(pozycja != null){ filterUlozenie(panstwaPoKolorach, panstwaPoUlozeniu, u = pozycja) }
         filterZnaczek(panstwaPoUlozeniu, panstwaPoZnaczku, z = znaczek)
 
-        fun ostatiaLista(p: MutableList<Panstwo>, pk: MutableList<Panstwo>, pu: MutableList<Panstwo>, pz: MutableList<Panstwo>): MutableList<Panstwo> {
-            if(!pz.isEmpty()){return pz}
-            else if(!pu.isEmpty()){return pu}
-            else if(!pk.isEmpty()){return pk}
-            else if(!p.isEmpty()){return p}
-            else{return p}
-        }
 
         rv.adapter = RvAdapter(panstwaPoZnaczku)
     }
