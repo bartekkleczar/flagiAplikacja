@@ -41,10 +41,10 @@ class MainActivity : AppCompatActivity() {
 
         val info = findViewById<TextView>(R.id.tvInfo)
         var text = ""
-        if(czerwony == 1){text += "Czerwony "}
-        if(bialy == 1){text += "Biały "}
-        if(niebieski == 1){text += "Niebieski "}
-        if(czarny == 1){text += "Czarny "}
+        if(czerwony == 1 || czerwony == 2){text += "Czerwony "}
+        if(bialy == 1 || bialy == 2){text += "Biały "}
+        if(niebieski == 1 || niebieski == 2){text += "Niebieski "}
+        if(czarny == 1 || czarny == 2){text += "Czarny "}
         text += "| $pozycja"
         info.text = text
 
