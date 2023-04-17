@@ -48,6 +48,7 @@ val turcja = Panstwo("Turcja", u = "inne", z = true, cze = 1, bi = 1, ni = 0, cz
 val ukraina = Panstwo("Ukraina", u = "poziome", z = false, cze = 0, bi = 0, ni = 1, cza = 0, image = R.drawable.ukraina)
 val watykan = Panstwo("Watykan", u = "pionowe", z = true, cze = 0, bi = 1, ni = 0, cza = 0, image = R.drawable.watykan)
 val walia = Panstwo("Walia", u = "poziome", z = true, cze = 1, bi = 1, ni = 0, cza = 0, image = R.drawable.walia)
+val wielkabrytania = Panstwo("Wielka Brytania", u = "krzyz", z = false, cze = 1, bi = 1, ni = 1, cza = 0, image = R.drawable.wielkabrytania)
 val wegry = Panstwo("Wegry", u = "poziome", z = false, cze = 1, bi = 1, ni = 0, cza = 0, image = R.drawable.wegry)
 val wlochy = Panstwo("Wlochy", u = "pionowe", z = false, cze = 1, bi = 1, ni = 0, cza = 0, image = R.drawable.wlochy)
 
@@ -55,9 +56,9 @@ val wlochy = Panstwo("Wlochy", u = "pionowe", z = false, cze = 1, bi = 1, ni = 0
 val panstwa = mutableListOf<Panstwo>(
     albania, andora, armenia, austria, azerbejdzan, anglia, bialorus,
     bosnia, bulgaria, chorwacja, czarnogora, czechy, dania, estonia,
-    finlandia, francja, grecja, hiszpania, holandia, irlandia, islandia,
+    finlandia, francja, grecja, hiszpania, holandia, irlandia, irlanidapln, islandia,
     kazachstan, liechtenstein, litwa, luksemburg, lotwa, macedonia, malta,
     moldawia, monako,niemcy, norwegia, polska, portugalia, rosja, rumunia,
-    sanmarino, serbia, slowacja, slowenia, szwajcaria, szwecja, turcja,
-    ukraina, watykan, wegry, wlochy
+    sanmarino, serbia, slowacja, slowenia, szkocja, szwajcaria, szwecja, turcja,
+    ukraina, watykan, walia, wielkabrytania, wegry, wlochy
 )
