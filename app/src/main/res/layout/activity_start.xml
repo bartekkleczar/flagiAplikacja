@@ -225,7 +225,7 @@
                 android:id="@+id/switchKolory"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:text="Switch"
+                android:text="Wszystkie"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold"
