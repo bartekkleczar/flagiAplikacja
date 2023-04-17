@@ -27,20 +27,21 @@ class StartActivity : AppCompatActivity() {
             else if(checkedId == R.id.rbInne){pozycja = "inne"}
             else if(checkedId == R.id.rbDowolne){pozycja = "dowolne"}
             key += "b"
-            if(key == "aab" || key == "aba" || key == "baa" || (key.length > 3 && "b" in key)) {filter.visibility = View.VISIBLE}
+            if(key == "ab" || key == "ba" || (key.length > 2 && "b" in key)) {filter.visibility = View.VISIBLE}
         }
 
         var czerwony = 0
         var bialy = 0
         var niebieski = 0
         var czarny = 0
+        var switch = 2
 
         val cbCzerwony = findViewById<CheckBox>(R.id.cbCzerwony)
         cbCzerwony.setOnCheckedChangeListener { buttonView, isChecked ->
             if (isChecked) {
                 czerwony = 1
                 key += "a"
-                if(key == "aab" || key == "aba" || key == "baa" || (key.length > 3 && "b" in key)) {filter.visibility = View.VISIBLE}
+                if(key == "ab" || key == "ba" || (key.length > 2 && "b" in key)) {filter.visibility = View.VISIBLE}
             } else {
                 czerwony = 0
             }
@@ -51,7 +52,7 @@ class StartActivity : AppCompatActivity() {
             if (isChecked) {
                 bialy = 1
                 key += "a"
-                if(key == "aab" || key == "aba" || key == "baa" || (key.length > 3 && "b" in key)) {filter.visibility = View.VISIBLE}
+                if(key == "ab" || key == "ba" || (key.length > 2 && "b" in key)) {filter.visibility = View.VISIBLE}
             } else {
                 bialy = 0
             }
@@ -62,7 +63,7 @@ class StartActivity : AppCompatActivity() {
             if (isChecked) {
                 niebieski = 1
                 key += "a"
-                if(key == "aab" || key == "aba" || key == "baa" || (key.length > 3 && "b" in key)) {filter.visibility = View.VISIBLE}
+                if(key == "ab" || key == "ba" || (key.length > 2 && "b" in key)) {filter.visibility = View.VISIBLE}
             } else {
                 niebieski = 0
             }
@@ -79,6 +80,11 @@ class StartActivity : AppCompatActivity() {
             }
         }
 
+        if(switch == 2 && czerwony == 0){czerwony = 2}
+        if(switch == 2 && bialy == 0){bialy = 2}
+        if(switch == 2 && niebieski == 0){niebieski = 2}
+        if(switch == 2 && czarny == 0){czarny = 2}
+        
         filter.setOnClickListener{
             val intent = Intent(this, MainActivity::class.java)
 
