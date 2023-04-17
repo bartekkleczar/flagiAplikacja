@@ -23,11 +23,9 @@ class StartActivity : AppCompatActivity() {
         switchZnaczek.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
                 switchZn = true
-                Toast.makeText(this, "Znaczek: $switchZnaczek", Toast.LENGTH_SHORT).show()
             }
             if (!isChecked) {
                 switchZn = false
-                Toast.makeText(this, "Znaczek: $switchZnaczek", Toast.LENGTH_SHORT).show()
             }
         }
         if(!switchZnaczek.isChecked){switchZn = false}

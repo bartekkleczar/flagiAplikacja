@@ -41,7 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="64dp"
         app:cardBackgroundColor="@color/backgroundMa"
-        app:cardCornerRadius="50dp"
+        app:cardCornerRadius="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
