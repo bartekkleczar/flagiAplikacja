@@ -1,11 +1,13 @@
 package pl.klenczi.flagieuropy
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.CheckBox
+import android.widget.ImageButton
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Switch
@@ -15,6 +17,14 @@ class StartActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
+
+        val git = findViewById<ImageButton>(R.id.ibtnGit)
+        git.setOnClickListener{
+            val url = "https://github.com/bartekkleczar/flagiAplikacja"
+            val githubIntent = Intent(Intent.ACTION_VIEW)
+            githubIntent.data = Uri.parse(url)
+            startActivity(githubIntent)
+        }
         
         val switchZnaczek = findViewById<Switch>(R.id.switchZnaczek)
         switchZnaczek.isChecked = false
