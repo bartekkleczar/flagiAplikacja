@@ -17,12 +17,14 @@ val estonia = Panstwo("Estonia", u = "poziome", z = false, cze = 0, bi = 1, ni =
 val finlandia = Panstwo("Finlandia", u = "krzyz", z = false, cze = 0, bi = 1, ni = 1, cza = 0, image = R.drawable.finlandia)
 val francja = Panstwo("Francja", u = "pionowe", z = false, cze = 1, bi = 1, ni = 1, cza = 0, image = R.drawable.francja)
 val grecja = Panstwo("Grecja", u = "poziome", z = false, cze = 0, bi = 1, ni = 1, cza = 0, image = R.drawable.grecja)
+val giblartar = Panstwo("Giblartar", u = "poziome", z = true, cze = 1, bi = 1, ni = 0, cza = 2, image = R.drawable.giblartar)
 val hiszpania = Panstwo("Hiszpania", u = "poziome", z = true, cze = 1, bi = 0, ni = 0, cza = 0, image = R.drawable.hiszpania)
 val holandia = Panstwo("Holandia", u = "poziome", z = false, cze = 1, bi = 1, ni = 1, cza = 0, image = R.drawable.holandia)
 val irlandia = Panstwo("Irlandia", u = "pionowe", z = false, cze = 0, bi = 1, ni = 0, cza = 0, image = R.drawable.irlandia)
 val irlanidapln = Panstwo("Irlanida Polnocna", u = "krzyz", z = true, cze = 1, bi = 1, ni = 0, cza = 0, image = R.drawable.irlanidapln)
 val islandia = Panstwo("Islandia", u = "krzyz", z = false, cze = 1, bi = 1, ni = 1, cza = 0, image = R.drawable.islandia)
 val kazachstan = Panstwo("Kazachstan", u = "inne", z = true, cze = 0, bi = 0, ni = 1, cza = 0, image = R.drawable.kazachstan)
+val kosowo = Panstwo("Kosowo", u = "inne", z = true, cze = 0, bi = 0, ni = 1, cza = 0, image = R.drawable.kosowo)
 val liechtenstein = Panstwo("Liechtenstein", u = "poziome", z = true, cze = 1, bi = 0, ni = 1, cza = 0, image = R.drawable.liechtenstein)
 val litwa = Panstwo("Litwa", u = "poziome", z = false, cze = 1, bi = 0, ni = 0, cza = 0, image = R.drawable.litwa)
 val luksemburg = Panstwo("Luksemburg", u = "poziome", z = false, cze = 1, bi = 1, ni = 1, cza = 0, image = R.drawable.luksemburg)
@@ -51,14 +53,16 @@ val walia = Panstwo("Walia", u = "poziome", z = true, cze = 1, bi = 1, ni = 0, c
 val wielkabrytania = Panstwo("Wielka Brytania", u = "krzyz", z = false, cze = 1, bi = 1, ni = 1, cza = 0, image = R.drawable.wielkabrytania)
 val wegry = Panstwo("Wegry", u = "poziome", z = false, cze = 1, bi = 1, ni = 0, cza = 0, image = R.drawable.wegry)
 val wlochy = Panstwo("Wlochy", u = "pionowe", z = false, cze = 1, bi = 1, ni = 0, cza = 0, image = R.drawable.wlochy)
+val wyspyowcze = Panstwo("Wyspy Owcze", u = "krzyz", z = false, cze = 1, bi = 1, ni = 0, cza = 0, image = R.drawable.wyspyowcze)
+val wyspaman = Panstwo("Wyspa Man", u = "inne", z = true, cze = 1, bi = 1, ni = 0, cza = 0, image = R.drawable.wyspaman)
 
 
 val panstwa = mutableListOf<Panstwo>(
     albania, andora, armenia, austria, azerbejdzan, anglia, bialorus,
     bosnia, bulgaria, chorwacja, czarnogora, czechy, dania, estonia,
-    finlandia, francja, grecja, hiszpania, holandia, irlandia, irlanidapln, islandia,
-    kazachstan, liechtenstein, litwa, luksemburg, lotwa, macedonia, malta,
+    finlandia, francja, grecja, giblartar, hiszpania, holandia, irlandia, irlanidapln, islandia,
+    kazachstan, kosowo, liechtenstein, litwa, luksemburg, lotwa, macedonia, malta,
     moldawia, monako,niemcy, norwegia, polska, portugalia, rosja, rumunia,
     sanmarino, serbia, slowacja, slowenia, szkocja, szwajcaria, szwecja, turcja,
-    ukraina, watykan, walia, wielkabrytania, wegry, wlochy
+    ukraina, watykan, walia, wielkabrytania, wegry, wlochy, wyspyowcze, wyspaman
 )
