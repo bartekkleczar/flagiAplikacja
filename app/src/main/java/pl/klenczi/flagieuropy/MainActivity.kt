@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         val niebieski = intent.getIntExtra("niebieski", 0)
         val czarny = intent.getIntExtra("czarny", 0)
         val pozycja = intent.getStringExtra("pozycja")
-        val znaczek = intent.getBooleanExtra("znaczek", false)
+        val znaczek = intent.getIntExtra("znaczek", 0)
 
         val info = findViewById<TextView>(R.id.tvInfo)
         var text = ""

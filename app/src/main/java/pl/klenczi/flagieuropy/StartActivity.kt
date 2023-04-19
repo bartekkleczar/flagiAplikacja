@@ -25,24 +25,18 @@ class StartActivity : AppCompatActivity() {
             githubIntent.data = Uri.parse(url)
             startActivity(githubIntent)
         }
-        
-        val switchZnaczek = findViewById<Switch>(R.id.switchZnaczek)
-        switchZnaczek.isChecked = false
-        var switchZn = false
 
-        switchZnaczek.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-                switchZn = true
-            }
-            if (!isChecked) {
-                switchZn = false
-            }
+        var switchZn = 2
+        val rbGroupZnaczek = findViewById<RadioGroup>(R.id.rbGroupZnaczek)
+        rbGroupZnaczek.setOnCheckedChangeListener { group, checkedId ->
+            if(checkedId == R.id.rbZnaczek){switchZn = 1}
+            else if(checkedId == R.id.rbBezZnaczka){switchZn = 0}
+            else if(checkedId == R.id.rbDowolnyZnaczek){switchZn = 2}
         }
-        if(!switchZnaczek.isChecked){switchZn = false}
 
 
         val switchKolory = findViewById<Switch>(R.id.switchKolory)
-        switchZnaczek.isChecked = false
+        switchKolory.isChecked = false
         var switch = 2
 
         switchKolory.setOnCheckedChangeListener { _, isChecked ->
@@ -55,7 +49,7 @@ class StartActivity : AppCompatActivity() {
                 Toast.makeText(this, "$switch", Toast.LENGTH_SHORT).show()
             }
         }
-        if(!switchZnaczek.isChecked){switchZn = false}
+        //if(!switchZnaczek.isChecked){switchZn = false}
 
 
         val filter = findViewById<Button>(R.id.btnFilter)
@@ -165,7 +159,7 @@ class StartActivity : AppCompatActivity() {
             czarny = 0
             key = ""
             pozycja = "dowolne"
-            switchZn = false
+            switchZn = 0
 
             startActivity(intent)
         }
