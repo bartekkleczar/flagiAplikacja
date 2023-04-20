@@ -53,7 +53,7 @@ val walia =         Panstwo("Walia",            u = "poziome",  z = 1,   cze = 1
 val wielkabrytania =Panstwo("Wielka Brytania",  u = "krzyz",    z = 0,  cze = 1, bi = 1, ni = 1, cza = 0, image = R.drawable.wielkabrytania)
 val wegry =         Panstwo("Wegry",            u = "poziome",  z = 0,  cze = 1, bi = 1, ni = 0, cza = 0, image = R.drawable.wegry)
 val wlochy =        Panstwo("Wlochy",           u = "pionowe",  z = 0,  cze = 1, bi = 1, ni = 0, cza = 0, image = R.drawable.wlochy)
-val wyspyowcze =    Panstwo("Wyspy Owcze",      u = "krzyz",    z = 0,  cze = 1, bi = 1, ni = 0, cza = 0, image = R.drawable.wyspyowcze)
+val wyspyowcze =    Panstwo("Wyspy Owcze",      u = "krzyz",    z = 0,  cze = 1, bi = 1, ni = 1, cza = 0, image = R.drawable.wyspyowcze)
 val wyspaman =      Panstwo("Wyspa Man",        u = "inne",     z = 1,   cze = 1, bi = 1, ni = 0, cza = 0, image = R.drawable.wyspaman)
 
 
