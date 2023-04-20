@@ -15,5 +15,7 @@
     <string name="Szukaj">Search</string>
     <string name="Ilosc">Quantity</string>
     <string name="Ulozenie">Layout</string>
-    <string name="Ulozenie">L</string>
+    <string name="tak">yes</string>
+    <string name="nie">no</string>
+    <string name="BrakWyników">No Results</string>
 </resources>

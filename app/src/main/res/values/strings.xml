@@ -15,4 +15,7 @@
     <string name="Szukaj">Szukaj</string>
     <string name="Ilosc">Ilość</string>
     <string name="Ulozenie">Ułożenie</string>
+    <string name="tak">tak</string>
+    <string name="nie">nie</string>
+    <string name="BrakWyników">Brak Wyników</string>
 </resources>

@@ -42,21 +42,40 @@ class MainActivity : AppCompatActivity() {
 
         val infoKolory = findViewById<TextView>(R.id.tvInfoKolory)
         var textColory = ""
-        if(czerwony == 1 || czerwony == 2){textColory += "Czerwony "}
-        if(bialy == 1 || bialy == 2){textColory += "Biały "}
-        if(niebieski == 1 || niebieski == 2){textColory += "Niebieski "}
-        if(czarny == 1 || czarny == 2){textColory += "Czarny "}
-        if(textColory == "Czerwony Biały Niebieski Czarny "){textColory = "Wszystkie kolory "}
+        val kCzerwony = getString(R.string.Czerwony)
+        val kBialy = getString(R.string.Biały)
+        val kNiebieski = getString(R.string.Niebieski)
+        val kCzarny = getString(R.string.Czarny)
+        val kWszystkie = getString(R.string.WszytkieKolory)
+        if(czerwony == 1 || czerwony == 2){textColory += "$kCzerwony "}
+        if(bialy == 1 || bialy == 2){textColory += "$kBialy "}
+        if(niebieski == 1 || niebieski == 2){textColory += "$kNiebieski "}
+        if(czarny == 1 || czarny == 2){textColory += "$kCzarny "}
+        if(textColory == "$kCzerwony $kBialy $kNiebieski $kCzarny "){textColory = "$kWszystkie "}
         infoKolory.text = textColory
 
         val infoUlozenie = findViewById<TextView>(R.id.tvInfoUlozenie)
-        var znaczekInfo = "dowolne"
+        val dowolne = getString(R.string.Dowolne)
+        val nie = getString(R.string.nie)
+        val tak = getString(R.string.tak)
+        var znaczekInfo = dowolne
         when(znaczek){
-            0 -> {znaczekInfo = "nie"}
-            1 -> {znaczekInfo = "tak"}
-            2 -> {znaczekInfo = "dowolne"}
+            0 -> {znaczekInfo = nie}
+            1 -> {znaczekInfo = tak}
+            2 -> {znaczekInfo = dowolne}
         }
-        infoUlozenie.text = "Ulozenie: $pozycja, Znaczek: $znaczekInfo"
+        val iUlozenie = getString(R.string.Ulozenie)
+        val iZnaczek = getString(R.string.Znaczek)
+        var iPozycja = ""
+        when(pozycja){
+            "pionowe" -> {iPozycja = getString(R.string.Pionowe)}
+            "poziome" -> {iPozycja = getString(R.string.Poziome)}
+            "krzyz" -> {iPozycja = getString(R.string.Krzyz)}
+            "inne" -> {iPozycja = getString(R.string.Inne)}
+            "dowolne" -> {iPozycja = getString(R.string.Dowolne)}
+            else -> {iPozycja = getString(R.string.Dowolne)}
+        }
+        infoUlozenie.text = "$iUlozenie: $iPozycja, $iZnaczek: $znaczekInfo"
 
 
         filterKolory(panstwa, panstwaPoKolorach, cze = czerwony, bi = bialy, ni = niebieski, cza = czarny)
@@ -64,12 +83,14 @@ class MainActivity : AppCompatActivity() {
         filterZnaczek(panstwaPoUlozeniu, panstwaPoZnaczku, z = znaczek)
 
         val size = findViewById<TextView>(R.id.tvSize)
+        val sBrakWynikow = getString(R.string.BrakWyników)
+        val sIlosc = getString(R.string.Ilosc)
         when(panstwaPoZnaczku.size){
             0 -> {
-                size.text = "Brak wyników"
+                size.text = sBrakWynikow
             }
             else ->{
-                size.text = "Ilość: ${panstwaPoZnaczku.size}"
+                size.text = "$sIlosc: ${panstwaPoZnaczku.size}"
             }
         }
 
