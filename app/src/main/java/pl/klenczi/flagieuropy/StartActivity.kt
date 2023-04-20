@@ -18,13 +18,6 @@ class StartActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
 
-        val git = findViewById<ImageButton>(R.id.ibtnGit)
-        git.setOnClickListener{
-            val url = "https://github.com/bartekkleczar/flagiAplikacja"
-            val githubIntent = Intent(Intent.ACTION_VIEW)
-            githubIntent.data = Uri.parse(url)
-            startActivity(githubIntent)
-        }
 
         var switchZn = 2
         val rbGroupZnaczek = findViewById<RadioGroup>(R.id.rbGroupZnaczek)

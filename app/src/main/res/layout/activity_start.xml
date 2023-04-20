@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/backgroundMa"
         android:text="Szukaj"
+        android:textColor="@color/black"
         android:textSize="34sp"
         android:textStyle="bold"
         app:cornerRadius="50dp"
@@ -67,7 +68,7 @@
                         android:layout_marginTop="25dp"
                         android:text="Pionowe"
                         android:textAlignment="center"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="30sp"
                         android:textStyle="bold" />
 
@@ -77,7 +78,7 @@
                         android:layout_height="wrap_content"
                         android:text="Poziome"
                         android:textAlignment="center"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="30sp"
                         android:textStyle="bold" />
 
@@ -87,7 +88,7 @@
                         android:layout_height="wrap_content"
                         android:text="Krzyz"
                         android:textAlignment="center"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="30sp"
                         android:textStyle="bold" />
 
@@ -97,7 +98,7 @@
                         android:layout_height="wrap_content"
                         android:text="Inne"
                         android:textAlignment="center"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="30sp"
                         android:textStyle="bold" />
 
@@ -107,7 +108,7 @@
                         android:layout_height="wrap_content"
                         android:text="Dowlone"
                         android:textAlignment="center"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="30sp"
                         android:textStyle="bold" />
 
@@ -154,7 +155,7 @@
                     android:buttonTint="@color/white"
                     android:text="Biały"
                     android:textAlignment="center"
-                    android:textColor="@android:color/white"
+                    android:textColor="@color/black"
                     android:textSize="30sp"
                     android:textStyle="bold" />
 
@@ -165,7 +166,7 @@
                     android:buttonTint="@color/white"
                     android:text="Czarny"
                     android:textAlignment="center"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="30sp"
                     android:textStyle="bold" />
 
@@ -176,7 +177,7 @@
                     android:buttonTint="@android:color/holo_blue_dark"
                     android:text="Niebieski"
                     android:textAlignment="center"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="30sp"
                     android:textStyle="bold" />
 
@@ -187,7 +188,7 @@
                     android:buttonTint="@android:color/holo_red_dark"
                     android:text="Czerwony"
                     android:textAlignment="center"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="30sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -219,7 +220,7 @@
                 android:layout_height="50dp"
                 android:text="Wszystkie Kolory"
                 android:textAlignment="center"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -229,37 +230,6 @@
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="150dp"
-        android:layout_height="250dp"
-        android:background="@color/backgroundMa"
-        android:backgroundTint="@color/backgroundMa"
-        app:cardCornerRadius="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.026"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.108">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageButton
-                android:id="@+id/ibtnGit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.466"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.125"
-                app:srcCompat="@drawable/githab" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -292,10 +262,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Znaczek"
-                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textAlignment="center" />
+                    android:textStyle="bold" />
 
                 <RadioButton
                     android:id="@+id/rbBezZnaczka"
@@ -303,7 +273,7 @@
                     android:layout_height="wrap_content"
                     android:text="Bez Znaczka"
                     android:textAlignment="center"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -313,7 +283,7 @@
                     android:layout_height="wrap_content"
                     android:text="Dowolne"
                     android:textAlignment="center"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </RadioGroup>
