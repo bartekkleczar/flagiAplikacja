@@ -53,7 +53,6 @@ class StartActivity : AppCompatActivity() {
             else if(checkedId == R.id.rbInne){pozycja = "inne"}
             else if(checkedId == R.id.rbDowolne){pozycja = "dowolne"}
             key += "b"
-            if(key == "ab" || key == "ba" || (key.length > 2 && "b" in key)) {filter.visibility = View.VISIBLE}
         }
 
         var czerwony = 0
@@ -67,7 +66,6 @@ class StartActivity : AppCompatActivity() {
             if (isChecked) {
                 czerwony = 1
                 key += "a"
-                if(key == "ab" || key == "ba" || (key.length > 2 && "b" in key)) {filter.visibility = View.VISIBLE}
             }
             if (!isChecked) {
                 czerwony = 0
@@ -81,7 +79,6 @@ class StartActivity : AppCompatActivity() {
             if (isChecked) {
                 bialy = 1
                 key += "a"
-                if(key == "ab" || key == "ba" || (key.length > 2 && "b" in key)) {filter.visibility = View.VISIBLE}
             }
             if (!isChecked){
                 bialy = 0
@@ -95,7 +92,6 @@ class StartActivity : AppCompatActivity() {
             if (isChecked) {
                 niebieski = 1
                 key += "a"
-                if(key == "ab" || key == "ba" || (key.length > 2 && "b" in key)) {filter.visibility = View.VISIBLE}
             }
             if (!isChecked) {
                 niebieski = 0
@@ -109,7 +105,6 @@ class StartActivity : AppCompatActivity() {
             if (isChecked) {
                 czarny = 1
                 key += "a"
-                if(key == "aab" || key == "aba" || key == "baa" || (key.length > 3 && "b" in key)) {filter.visibility = View.VISIBLE}
             }
             if (!isChecked) {
                 czarny = 0
