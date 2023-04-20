@@ -35,18 +35,13 @@ class StartActivity : AppCompatActivity() {
         switchKolory.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
                 switch = 1
-                Toast.makeText(this, "$switch", Toast.LENGTH_SHORT).show()
             }
             if (!isChecked) {
                 switch = 2
-                Toast.makeText(this, "$switch", Toast.LENGTH_SHORT).show()
             }
         }
-        //if(!switchZnaczek.isChecked){switchZn = false}
-
 
         val filter = findViewById<Button>(R.id.btnFilter)
-        //filter.visibility = View.INVISIBLE
         var key = ""
 
         var pozycja = "dowolne"
@@ -144,7 +139,7 @@ class StartActivity : AppCompatActivity() {
             intent.putExtra("pozycja", pozycja)
             intent.putExtra("znaczek", switchZn)
 
-            //switchKolory.isChecked = true
+            switchKolory.isChecked = false
             switch = 1
             czerwony = 0
             bialy = 0
