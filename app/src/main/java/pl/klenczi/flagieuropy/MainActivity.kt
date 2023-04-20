@@ -53,6 +53,8 @@ class MainActivity : AppCompatActivity() {
         if(pozycja != null){ filterUlozenie(panstwaPoKolorach, panstwaPoUlozeniu, u = pozycja) }
         filterZnaczek(panstwaPoUlozeniu, panstwaPoZnaczku, z = znaczek)
 
+        val size = findViewById<TextView>(R.id.tvSize)
+        size.text = "Ilość: ${panstwaPoZnaczku.size}"
 
         rv.adapter = RvAdapter(panstwaPoZnaczku)
     }
