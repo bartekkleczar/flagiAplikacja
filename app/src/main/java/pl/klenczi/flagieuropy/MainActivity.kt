@@ -54,7 +54,14 @@ class MainActivity : AppCompatActivity() {
         filterZnaczek(panstwaPoUlozeniu, panstwaPoZnaczku, z = znaczek)
 
         val size = findViewById<TextView>(R.id.tvSize)
-        size.text = "Ilość: ${panstwaPoZnaczku.size}"
+        when(panstwaPoZnaczku.size){
+            0 -> {
+                size.text = "Brak wyników"
+            }
+            else ->{
+                size.text = "Ilość: ${panstwaPoZnaczku.size}"
+            }
+        }
 
         rv.adapter = RvAdapter(panstwaPoZnaczku)
     }
