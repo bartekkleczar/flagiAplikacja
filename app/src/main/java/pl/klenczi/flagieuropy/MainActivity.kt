@@ -41,13 +41,14 @@ class MainActivity : AppCompatActivity() {
         val znaczek = intent.getIntExtra("znaczek", 0)
 
         val info = findViewById<TextView>(R.id.tvInfo)
-        var text = ""
-        if(czerwony == 1 || czerwony == 2){text += "Czerwony "}
-        if(bialy == 1 || bialy == 2){text += "Biały "}
-        if(niebieski == 1 || niebieski == 2){text += "Niebieski "}
-        if(czarny == 1 || czarny == 2){text += "Czarny "}
-        text += "| $pozycja"
-        info.text = text
+        var textColory = ""
+        if(czerwony == 1 || czerwony == 2){textColory += "Czerwony "}
+        if(bialy == 1 || bialy == 2){textColory += "Biały "}
+        if(niebieski == 1 || niebieski == 2){textColory += "Niebieski "}
+        if(czarny == 1 || czarny == 2){textColory += "Czarny "}
+        if(textColory == "Czerwony Biały Niebieski Czarny "){textColory = "Wszystkie kolory "}
+        textColory += "| $pozycja"
+        info.text = textColory
 
         filterKolory(panstwa, panstwaPoKolorach, cze = czerwony, bi = bialy, ni = niebieski, cza = czarny)
         if(pozycja != null){ filterUlozenie(panstwaPoKolorach, panstwaPoUlozeniu, u = pozycja) }
