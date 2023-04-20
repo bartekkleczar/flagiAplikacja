@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Flagi Europy</string>
+    <string name="Biały">Biały</string>
+    <string name="Czarny">Czarny</string>
+    <string name="Niebieski">Niebieski</string>
+    <string name="Czerwony">Czerwony</string>
+    <string name="Pionowe">Pionowe</string>
+    <string name="Poziome">Poziome</string>
+    <string name="Krzyz">Krzyz</string>
+    <string name="Inne">Inne</string>
+    <string name="Dowolne">Dowolne</string>
+    <string name="Znaczek">Znaczek</string>
+    <string name="BezZnaczka">Bez Znaczka</string>
+    <string name="WszytkieKolory">Wszytkie Kolory</string>
+    <string name="Szukaj">Szukaj</string>
+    <string name="Ilosc">Ilość</string>
+    <string name="Ulozenie">Ułożenie</string>
 </resources>

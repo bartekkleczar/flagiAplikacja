@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">European Flags</string>
+    <string name="Biały">White</string>
+    <string name="Czarny">Black</string>
+    <string name="Niebieski">Blue</string>
+    <string name="Czerwony">Red</string>
+    <string name="Pionowe">Vertical</string>
+    <string name="Poziome">Horizontal</string>
+    <string name="Krzyz">Cross</string>
+    <string name="Inne">Other</string>
+    <string name="Dowolne">Any</string>
+    <string name="Znaczek">Symbol</string>
+    <string name="BezZnaczka">Without Symbol</string>
+    <string name="WszytkieKolory">All Colors</string>
+    <string name="Szukaj">Search</string>
+    <string name="Ilosc">Quantity</string>
+    <string name="Ulozenie">Layout</string>
+    <string name="Ulozenie">L</string>
+</resources>
