@@ -29,7 +29,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView4"
         android:layout_width="220dp"
-        android:layout_height="320dp"
+        android:layout_height="260dp"
         android:backgroundTint="@color/backgroundRv"
         app:cardCornerRadius="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -37,7 +37,7 @@
         app:layout_constraintHorizontal_bias="0.916"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.734">
+        app:layout_constraintVertical_bias="0.768">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="210dp"
@@ -46,7 +46,7 @@
             <LinearLayout
                 android:id="@+id/linearLayout2"
                 android:layout_width="200dp"
-                android:layout_height="wrap_content"
+                android:layout_height="250dp"
                 android:layout_marginLeft="25dp"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -56,21 +56,21 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.29">
 
+                <RadioButton
+                    android:id="@+id/rbPionowe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="@string/Pionowe"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
                 <RadioGroup
                     android:id="@+id/rbGroup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-
-                    <RadioButton
-                        android:id="@+id/rbPionowe"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="25dp"
-                        android:text="@string/Pionowe"
-                        android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="30sp"
-                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/rbPoziome"
@@ -121,7 +121,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView5"
         android:layout_width="220dp"
-        android:layout_height="250dp"
+        android:layout_height="220dp"
         android:backgroundTint="@color/backgroundRv"
         app:cardCornerRadius="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -129,7 +129,7 @@
         app:layout_constraintHorizontal_bias="0.916"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.108">
+        app:layout_constraintVertical_bias="0.254">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="210dp"
@@ -140,7 +140,7 @@
             <LinearLayout
                 android:id="@+id/linearLayout"
                 android:layout_width="wrap_content"
-                android:layout_height="220dp"
+                android:layout_height="200dp"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -287,6 +287,50 @@
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </RadioGroup>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        app:cardBackgroundColor="@color/backgroundMa"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.007">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/etNameInput"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:hint="Wprowadź tekst"
+                android:inputType="text"
+                android:maxLength="20"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.48" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.03"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.48"
+                app:srcCompat="@android:drawable/ic_menu_search" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
