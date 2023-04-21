@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.CheckBox
+import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.RadioButton
 import android.widget.RadioGroup
@@ -17,6 +18,9 @@ class StartActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
+
+        val etName = findViewById<EditText>(R.id.etNameInput)
+        var name = ""
 
 
         var switchZn = 2
@@ -125,6 +129,8 @@ class StartActivity : AppCompatActivity() {
             if(switch == 2 && czarny == 0){czarny = 2}
             if(switch == 1 && czarny != 1){czarny = 0}
 
+            name = etName.text.toString()
+
             val intent = Intent(this, MainActivity::class.java)
 
             intent.putExtra("czerwony", czerwony)
@@ -133,6 +139,7 @@ class StartActivity : AppCompatActivity() {
             intent.putExtra("czarny", czarny)
             intent.putExtra("pozycja", pozycja)
             intent.putExtra("znaczek", switchZn)
+            intent.putExtra("nazwa", name)
 
             switchKolory.isChecked = false
             switch = 1
@@ -143,6 +150,7 @@ class StartActivity : AppCompatActivity() {
             key = ""
             pozycja = "dowolne"
             switchZn = 0
+            name = ""
 
             startActivity(intent)
         }

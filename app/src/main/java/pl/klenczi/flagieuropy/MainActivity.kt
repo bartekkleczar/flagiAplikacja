@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         val panstwaPoKolorach = mutableListOf<Panstwo>()
         val panstwaPoUlozeniu = mutableListOf<Panstwo>()
         val panstwaPoZnaczku = mutableListOf<Panstwo>()
+        val panstwaPoNazwie = mutableListOf<Panstwo>()
 
         val rv = findViewById<RecyclerView>(R.id.rvFlagi)
         val colorTla = ContextCompat.getColor(this, R.color.backgroundMa)
@@ -39,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         val czarny = intent.getIntExtra("czarny", 0)
         val pozycja = intent.getStringExtra("pozycja")
         val znaczek = intent.getIntExtra("znaczek", 0)
+        val name = intent.getStringExtra("nazwa")
 
         val infoKolory = findViewById<TextView>(R.id.tvInfoKolory)
         var textColory = ""
@@ -51,7 +53,7 @@ class MainActivity : AppCompatActivity() {
         if(bialy == 1 || bialy == 2){textColory += "$kBialy "}
         if(niebieski == 1 || niebieski == 2){textColory += "$kNiebieski "}
         if(czarny == 1 || czarny == 2){textColory += "$kCzarny "}
-        if(textColory == "$kCzerwony $kBialy $kNiebieski $kCzarny "){textColory = "$kWszystkie "}
+        if(textColory == "$kCzerwony $kBialy $kNiebieski $kCzarny "){textColory = "$kWszystkie, $name "}
         infoKolory.text = textColory
 
         val infoUlozenie = findViewById<TextView>(R.id.tvInfoUlozenie)
@@ -81,11 +83,13 @@ class MainActivity : AppCompatActivity() {
         filterKolory(panstwa, panstwaPoKolorach, cze = czerwony, bi = bialy, ni = niebieski, cza = czarny)
         if(pozycja != null){ filterUlozenie(panstwaPoKolorach, panstwaPoUlozeniu, u = pozycja) }
         filterZnaczek(panstwaPoUlozeniu, panstwaPoZnaczku, z = znaczek)
+        filterNazwa(panstwaPoZnaczku, panstwaPoNazwie, name)
+
 
         val size = findViewById<TextView>(R.id.tvSize)
         val sBrakWynikow = getString(R.string.BrakWyników)
         val sIlosc = getString(R.string.Ilosc)
-        when(panstwaPoZnaczku.size){
+        when(panstwaPoNazwie.size){
             0 -> {
                 size.text = sBrakWynikow
             }
@@ -94,6 +98,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        rv.adapter = RvAdapter(panstwaPoZnaczku)
+        rv.adapter = RvAdapter(panstwaPoNazwie)
     }
 }
