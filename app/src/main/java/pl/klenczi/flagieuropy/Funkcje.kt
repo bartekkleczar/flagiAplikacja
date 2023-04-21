@@ -29,3 +29,12 @@ fun filterZnaczek(listaInput: MutableList<Panstwo>, listaOutput: MutableList<Pan
         }
     }
 }
+
+fun filterNazwa(listaInput: MutableList<Panstwo>, listaOutput: MutableList<Panstwo>, nazwaInput: String, nazwaKlucz: String){
+    for(i in listaInput){
+        var name = i.n
+        if(name.contains(nazwaKlucz)){
+            listaOutput.add(i)
+        }
+    }
+}
