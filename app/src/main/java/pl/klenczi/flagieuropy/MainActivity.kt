@@ -121,18 +121,18 @@ class MainActivity : AppCompatActivity() {
         if(bialy == 1 || bialy == 2){textColory += "$kBialy "}
         if(niebieski == 1 || niebieski == 2){textColory += "$kNiebieski "}
         if(czarny == 1 || czarny == 2){textColory += "$kCzarny "}
-        if(textColory == "$kCzerwony $kBialy $kNiebieski $kCzarny "){textColory = "$kWszystkie, $name "}
+        if(textColory == "$kCzerwony $kBialy $kNiebieski $kCzarny "){textColory = "$kWszystkie "}
         infoKolory.text = textColory
 
         val infoUlozenie = findViewById<TextView>(R.id.tvInfoUlozenie)
-        val dowolne = getString(R.string.Dowolne)
-        val nie = getString(R.string.nie)
-        val tak = getString(R.string.tak)
-        var znaczekInfo = dowolne
+        val idowolne = getString(R.string.Dowolne)
+        val inie = getString(R.string.nie)
+        val itak = getString(R.string.tak)
+        var znaczekInfo = idowolne
         when(znaczek){
-            0 -> {znaczekInfo = nie}
-            1 -> {znaczekInfo = tak}
-            2 -> {znaczekInfo = dowolne}
+            0 -> {znaczekInfo = inie}
+            1 -> {znaczekInfo = itak}
+            2 -> {znaczekInfo = idowolne}
         }
         val iUlozenie = getString(R.string.Ulozenie)
         val iZnaczek = getString(R.string.Znaczek)
@@ -145,7 +145,8 @@ class MainActivity : AppCompatActivity() {
             "dowolne" -> {iPozycja = getString(R.string.Dowolne)}
             else -> {iPozycja = getString(R.string.Dowolne)}
         }
-        infoUlozenie.text = "$iUlozenie: $iPozycja, $iZnaczek: $znaczekInfo"
+        val inazwa = getString(R.string.Nazwa)
+        infoUlozenie.text = "$iUlozenie: $iPozycja, $iZnaczek: $znaczekInfo, $inazwa: $name"
 
 
         filterKolory(panstwa, panstwaPoKolorach, cze = czerwony, bi = bialy, ni = niebieski, cza = czarny)
