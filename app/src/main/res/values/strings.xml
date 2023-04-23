@@ -21,5 +21,5 @@
     <string name="Polska">Poland</string>
     <string name="Powrót">Back</string>
     <string name="Nazwa">Name</string>
-    <string name="WprowadźTekst">Input Text</string>
+    <string name="WprowadźTekst">Input Name</string>
 </resources>
