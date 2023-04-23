@@ -145,14 +145,19 @@ class MainActivity : AppCompatActivity() {
             "dowolne" -> {iPozycja = getString(R.string.Dowolne)}
             else -> {iPozycja = getString(R.string.Dowolne)}
         }
-        val inazwa = getString(R.string.Nazwa)
-        infoUlozenie.text = "$iUlozenie: $iPozycja, $iZnaczek: $znaczekInfo, $inazwa: $name"
+
+        infoUlozenie.text = "$iUlozenie: $iPozycja, $iZnaczek: $znaczekInfo"
+
+        val tvInfoNazwa = findViewById<TextView>(R.id.tvInfoNazwa)
+        tvInfoNazwa.text = "$name"
 
 
         filterKolory(panstwa, panstwaPoKolorach, cze = czerwony, bi = bialy, ni = niebieski, cza = czarny)
         if(pozycja != null){ filterUlozenie(panstwaPoKolorach, panstwaPoUlozeniu, u = pozycja) }
         filterZnaczek(panstwaPoUlozeniu, panstwaPoZnaczku, z = znaczek)
-        filterNazwa(panstwaPoZnaczku, panstwaPoNazwie, name)
+        if (name != null) {
+            filterNazwa(panstwaPoZnaczku, panstwaPoNazwie, name.lowercase())
+        }
 
 
         val size = findViewById<TextView>(R.id.tvSize)
@@ -163,7 +168,7 @@ class MainActivity : AppCompatActivity() {
                 size.text = sBrakWynikow
             }
             else ->{
-                size.text = "$sIlosc: ${panstwaPoZnaczku.size}"
+                size.text = "$sIlosc: ${panstwaPoNazwie.size}"
             }
         }
 
