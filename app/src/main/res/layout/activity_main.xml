@@ -12,7 +12,9 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvFlagi"
         android:layout_width="match_parent"
-        android:layout_height="550dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="110dp"
+        android:layout_marginBottom="60dp"
         android:background="@color/white"
         android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -25,18 +27,18 @@
     <Button
         android:id="@+id/btnPowrot"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:backgroundTint="@color/backgroundMa"
         android:text="@string/Powrót"
         android:textColor="@color/black"
-        android:textSize="34sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.993" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
