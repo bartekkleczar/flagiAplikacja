@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         val austria =       Panstwo("Austria",          u = "poziome",  z = 0,  cze = 1, bi = 1, ni = 0, cza = 0, image = R.drawable.austria)
         val azerbejdzan =   Panstwo("Azerbejdzan",      u = "poziome",  z = 1,   cze = 1, bi = 1, ni = 1, cza = 0, image = R.drawable.azerbejdzan)
         val anglia =        Panstwo("Anglia",           u = "krzyz",    z = 0,  cze = 1, bi = 1, ni = 0, cza = 0, image = R.drawable.anglia)
+        val belgia =        Panstwo("Belgia",           u = "pionowe",  z = 0,  cze = 1, bi = 0, ni = 0, cza = 1, image = R.drawable.belgia)
         val bialorus =      Panstwo("Bialorus",         u = "poziome",  z = 1,   cze = 1, bi = 1, ni = 0, cza = 0, image = R.drawable.bialorus)
         val bosnia =        Panstwo("Bosnia",           u = "inne",     z = 1,   cze = 0, bi = 1, ni = 1, cza = 0, image = R.drawable.bosnia)
         val bulgaria =      Panstwo("Bulgaria",         u = "poziome",  z = 0,  cze = 1, bi = 1, ni = 0, cza = 0, image = R.drawable.bulgaria)
