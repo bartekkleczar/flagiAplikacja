@@ -4,19 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    android:backgroundTint="@color/white"
-    android:foregroundTint="@color/white"
     tools:context=".MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvFlagi"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="110dp"
-        android:layout_marginBottom="60dp"
-        android:background="@color/white"
-        android:backgroundTint="@color/white"
+        android:layout_marginTop="115dp"
+        android:layout_marginBottom="65dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -28,7 +23,6 @@
         android:id="@+id/btnPowrot"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:backgroundTint="@color/backgroundMa"
         android:text="@string/Powrót"
         android:textColor="@color/black"
         android:textSize="30sp"
@@ -43,7 +37,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="110dp"
-        app:cardBackgroundColor="@color/backgroundMa"
+        android:backgroundTint="@color/main"
         app:cardCornerRadius="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

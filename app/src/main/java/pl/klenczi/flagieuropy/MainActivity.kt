@@ -99,8 +99,6 @@ class MainActivity : AppCompatActivity() {
         val panstwaPoNazwie = mutableListOf<Panstwo>()
 
         val rv = findViewById<RecyclerView>(R.id.rvFlagi)
-        val colorTla = ContextCompat.getColor(this, R.color.backgroundMa)
-        rv.setBackgroundColor(colorTla)
         rv.layoutManager = LinearLayoutManager(this)
 
         val intent = intent
