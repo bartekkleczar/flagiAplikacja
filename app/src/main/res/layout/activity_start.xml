@@ -56,21 +56,21 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.29">
 
-                <RadioButton
-                    android:id="@+id/rbPionowe"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
-                    android:text="@string/Pionowe"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="30sp"
-                    android:textStyle="bold" />
-
                 <RadioGroup
                     android:id="@+id/rbGroup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/rbPionowe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:text="@string/Pionowe"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/rbPoziome"

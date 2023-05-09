@@ -46,7 +46,6 @@ class StartActivity : AppCompatActivity() {
         }
 
         val filter = findViewById<Button>(R.id.btnFilter)
-        var key = ""
 
         var pozycja = "dowolne"
         val rbGroup = findViewById<RadioGroup>(R.id.rbGroup)
@@ -56,7 +55,6 @@ class StartActivity : AppCompatActivity() {
             else if(checkedId == R.id.rbKrzyz){pozycja = "krzyz"}
             else if(checkedId == R.id.rbInne){pozycja = "inne"}
             else if(checkedId == R.id.rbDowolne){pozycja = "dowolne"}
-            key += "b"
         }
 
         var czerwony = 0
@@ -69,7 +67,6 @@ class StartActivity : AppCompatActivity() {
         cbCzerwony.setOnCheckedChangeListener { buttonView, isChecked ->
             if (isChecked) {
                 czerwony = 1
-                key += "a"
             }
             if (!isChecked) {
                 czerwony = 0
@@ -82,7 +79,6 @@ class StartActivity : AppCompatActivity() {
         cbbialy.setOnCheckedChangeListener { buttonView, isChecked ->
             if (isChecked) {
                 bialy = 1
-                key += "a"
             }
             if (!isChecked){
                 bialy = 0
@@ -95,7 +91,6 @@ class StartActivity : AppCompatActivity() {
         cbniebieski.setOnCheckedChangeListener { buttonView, isChecked ->
             if (isChecked) {
                 niebieski = 1
-                key += "a"
             }
             if (!isChecked) {
                 niebieski = 0
@@ -108,7 +103,6 @@ class StartActivity : AppCompatActivity() {
         cbCzarny.setOnCheckedChangeListener { buttonView, isChecked ->
             if (isChecked) {
                 czarny = 1
-                key += "a"
             }
             if (!isChecked) {
                 czarny = 0
@@ -147,7 +141,6 @@ class StartActivity : AppCompatActivity() {
             bialy = 0
             niebieski = 0
             czarny = 0
-            key = ""
             pozycja = "dowolne"
             switchZn = 0
             name = ""

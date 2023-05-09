@@ -3,6 +3,7 @@ package pl.klenczi.flagieuropy
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import androidx.core.content.ContextCompat
@@ -139,7 +140,8 @@ class MainActivity : AppCompatActivity() {
         val iZnaczek = getString(R.string.Znaczek)
         var iPozycja = ""
         when(pozycja){
-            "pionowe" -> {iPozycja = getString(R.string.Pionowe)}
+            "pionowe" -> {iPozycja = getString(R.string.Pionowe)
+            Log.d("MainActivity", "$iPozycja")}
             "poziome" -> {iPozycja = getString(R.string.Poziome)}
             "krzyz" -> {iPozycja = getString(R.string.Krzyz)}
             "inne" -> {iPozycja = getString(R.string.Inne)}
