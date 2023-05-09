@@ -76,7 +76,7 @@ class MainActivity : AppCompatActivity() {
 
 
         val panstwa = mutableListOf<Panstwo>(
-            albania, andora, armenia, austria, azerbejdzan, anglia, bialorus,
+            albania, andora, armenia, austria, azerbejdzan, anglia, belgia, bialorus,
             bosnia, bulgaria, chorwacja, czarnogora, czechy, dania, estonia,
             finlandia, francja, grecja, giblartar, hiszpania, holandia, irlandia, irlanidapln, islandia,
             kazachstan, kosowo, liechtenstein, litwa, luksemburg, lotwa, macedonia, malta,
